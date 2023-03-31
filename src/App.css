@@ -36,7 +36,7 @@ html{
 
 /* Esconde a scrollbar no internet explorer, edge e firefox */
 
-.app-videos{
+.app__videos{
     -ms-overflow-style: none;
     scrollbar-width: none;
 }

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import VideoFooter from './components/footer/VideoFooter';
+import VideoSidebar from './components/sidebar/VideoSidebar';
 import "./video.css";
 
 const Video = () => {
@@ -28,7 +29,7 @@ const Video = () => {
                 src = "https://raw.githubusercontent.com/Gabriel-Vasconcelos/jornada-dev/master/public/assets/videos/video1.mp4"
             >  
             </video>
-
+            <VideoSidebar />
             <VideoFooter/>
         </div>
     )

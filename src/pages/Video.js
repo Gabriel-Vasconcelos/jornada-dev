@@ -3,7 +3,7 @@ import VideoFooter from './components/footer/VideoFooter';
 import VideoSidebar from './components/sidebar/VideoSidebar';
 import "./video.css";
 
-const Video = () => {
+const Video = ( {likes, messages, shares} ) => {
     
     const videoRef = useRef(null)
     const [play, setPlay] = useState(false)
@@ -29,7 +29,11 @@ const Video = () => {
                 src = "https://raw.githubusercontent.com/Gabriel-Vasconcelos/jornada-dev/master/public/assets/videos/video1.mp4"
             >  
             </video>
-            <VideoSidebar />
+            <VideoSidebar 
+                likes={likes}
+                messages={messages}
+                shares={shares}
+            />
             <VideoFooter/>
         </div>
     )

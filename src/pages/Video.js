@@ -3,7 +3,7 @@ import VideoFooter from './components/footer/VideoFooter';
 import VideoSidebar from './components/sidebar/VideoSidebar';
 import "./video.css";
 
-const Video = ( {likes, messages, shares} ) => {
+const Video = ( {likes, messages, shares, name, description, music, url} ) => {
     
     const videoRef = useRef(null)
     const [play, setPlay] = useState(false)
@@ -26,7 +26,7 @@ const Video = ( {likes, messages, shares} ) => {
                 ref={videoRef}
                 onClick={handdleStart}
                 loop
-                src = "https://raw.githubusercontent.com/Gabriel-Vasconcelos/jornada-dev/master/public/assets/videos/video1.mp4"
+                src = {url}
             >  
             </video>
             <VideoSidebar 
@@ -34,7 +34,11 @@ const Video = ( {likes, messages, shares} ) => {
                 messages={messages}
                 shares={shares}
             />
-            <VideoFooter/>
+            <VideoFooter
+                name={name}
+                description={description}
+                music={music}
+            />
         </div>
     )
 }
